@@ -9,6 +9,12 @@ public class LinkedList<E> implements List<E> {
     Node<E> last=null;
     int size=0;
     
+    
+    /**
+     * Este metodo lo que hara es retornar el tamano de la lista encadenada
+     *
+     * @return Integer
+     */
     @Override
     public int size() {
 		int ext = 0;
@@ -27,7 +33,10 @@ public class LinkedList<E> implements List<E> {
 	public boolean contains(Object o) {
 		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 	}
-        @Override
+    /*
+     * Este metodo permite la iteracion en nuestra lista encadenada
+     */    
+    @Override
 	public Iterator<E> iterator() {
 		 Iterator<E> iterador;
 	        iterador = new Iterator<E>() {
@@ -61,7 +70,13 @@ public class LinkedList<E> implements List<E> {
 	public <T> T[] toArray(T[] a) {
 		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 	}
-        @Override
+        
+        /**
+         * En este metodo llega la informacion a insertar, si no se ha creado ningun nodo y se hace llamado a este metodo lo creara y lo tomara este como raiz de ser creado actualizara la raiz siendo el nuevo nodo creado.
+         * @param e elemento que sera la informacion del nodo
+         * @return boolean si se realizo la insercion
+         */    
+    @Override
 	public boolean add(E e) {
 		Node n = new Node(e);
         n.setNext(first);
@@ -69,7 +84,13 @@ public class LinkedList<E> implements List<E> {
         size++;
         return true;
 	}
-        @Override
+    
+    /**
+     * Este metodo hace la busqueda Nodo por nodo para buscar dicho objeto y eliminarlo.
+     * @param o elemento que se quiere eliminar
+     * @return boolean si se realizo la eliminacion del Nodo
+     */
+    @Override
 	public boolean remove(Object o) {
 		Node nodo = first;
         Node ant=null;
@@ -116,6 +137,10 @@ public class LinkedList<E> implements List<E> {
 	public boolean retainAll(Collection<?> c) {
 		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 	}
+        
+        /**
+         * En este metodo se impirmira el nodo
+         */
 	public void print(){
 		Node nodo = first;
 		while (nodo != null) nodo = nodo.getNext();
@@ -126,7 +151,13 @@ public class LinkedList<E> implements List<E> {
 		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 		
 	}
-        @Override
+        
+        /**
+         * retorna el elemento del nodo en una posicion
+         * @param index que representa la posicion en la lista
+         * @return Elemento del nodo
+         */    
+    @Override
 	public E get(int index) {
 		E cont = null;
 		Node nodo = first;

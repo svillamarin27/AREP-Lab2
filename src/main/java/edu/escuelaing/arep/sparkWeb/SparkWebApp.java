@@ -27,7 +27,7 @@ import edu.escuelaing.arep.sparkWeb.Calculos.util.*;
 /**
  * Minimal web app example for Heroku using SparkWeb
  *
- * @author SebastiÃ¡n VillamarÃ­n
+ * @author SebastianVillamarin
  */
 
 
@@ -50,8 +50,8 @@ public class SparkWebApp {
 			+"<html>"
 			+"<body style=\"background-color:#F8F9C1;\">" 
 			+"<font align=\"center\" color=\"Olive\" face=\"Comic Sans MS,arial\">"
-			+ "<h1>Calculadora para hallar la media y desviación estandar</h1>"
-			+ "<h2>Ingrese los números separados por un punto y coma (;) </h2>" 
+			+ "<h1>Calculadora para hallar la media y desviacion estandar</h1>"
+			+ "<h2>Ingrese los numeros separados por un punto y coma (;) </h2>" 
 			+ "<form action='/resultados\'>" 
 			+ "<input type=\"text\" name='data'>"
 			+ "<input type=\"submit\" value=\"Calcular\">"  
